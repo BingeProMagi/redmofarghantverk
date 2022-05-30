@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import parse from "html-react-parser"
+import useMainMenu from "../hooks/use-mainmenu";
 
 const Layout = ({ isHomePage, children }) => {
   const {
@@ -17,6 +18,7 @@ const Layout = ({ isHomePage, children }) => {
       }
     }
   `)
+  const menu = useMainMenu()
 
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
@@ -30,6 +32,16 @@ const Layout = ({ isHomePage, children }) => {
             {title}
           </Link>
         )}
+
+
+        <div class="c-menu">
+          <ul>
+          {
+          menu.map(item => (
+            <li><Link to={item.url}>{item.label}</Link></li> 
+          ))}
+          </ul>
+        </div>
       </header>
 
       <main>{children}</main>
