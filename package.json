@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-wordpress-blog",
+  "name": "redmo-farghantverk",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com> and Tyler Barnes <tylerdbarnes@gmail.com>",
+  "author": "Markus Moestad <markus.moestad@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -11,12 +11,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
+  "license": "ISC",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
