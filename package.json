@@ -1,17 +1,9 @@
 {
-  "name": "redmo-farghantverk",
+  "name": "redmo-färghantverk",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Company homepage",
   "version": "1.0.0",
-  "author": "Markus Moestad <markus.moestad@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
