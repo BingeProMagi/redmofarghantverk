@@ -164,36 +164,3 @@ async function getPosts({ graphql, reporter }) {
 
   return graphqlResult.data.allWpPost.edges
 }
-
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const result = await graphql(`
-    query WpPages{
-      allWpPage(sort: { fields: [date], order: DESC } {
-        edges {
-          page: node {
-            id
-            databaseId
-            slug
-          }
-        }
-      }
-    }
-  `);
-
-  if (result.errors) {
-      reporter.panic('fail to create pages', result.errors);
-  }
-
-  const pages = result.data.allWpPage.edges.node.slug;
-
-  pages.forEach(page => {
-      actions.createPage({
-          path: page.node.slug,
-          component: require.resolve('./src/templates/post.js'),
-          context: {
-              slug: page.node.slug
-          },
-      });
-  })
-}
-
